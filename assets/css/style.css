@@ -18,26 +18,24 @@ body {
   color: #000;
 }
 
-#header {
-  width: 100%;
-  height: 100vh;
-}
-
 .container {
-  padding: 10px 10%;
+  padding: 10px 10% 0;
 }
 
-nav {
+.row {
   display: flex;
-  margin: 0.5rem -5% 0;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-transform: capitalize;
 }
 
 .logo {
   width: 140px;
+}
+
+nav {
+  display: flex;
+  margin: 0.5rem -10%;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: capitalize;
 }
 
 nav ul li {
@@ -57,7 +55,8 @@ nav ul li a {
 #header .buttons {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
   padding: 12px 24px;
   gap: 8px;
 }
@@ -75,20 +74,26 @@ nav ul li a {
   background: #e5f0b6;
 }
 
-.header-text {
-  margin-top: 15%;
-  font-size: 1.8rem;
+.row.header-body {
+  width: 100%;
+  height: 90vh;
 }
 
-.header-text h1 {
+.row.header-body .content {
+  margin-top: 15%;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.header-body .content h1 {
   font-weight: 800;
 }
 
-.header-text h1 span {
+.header-body .content h1 span {
   color: #817253;
 }
 
-.header-button {
+.header-body .header-button {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -101,7 +106,7 @@ nav ul li a {
   height: 80px;
 }
 
-.header-button .btn {
+.header-body .header-button .btn {
   flex: none;
   order: 1;
   align-self: stretch;
@@ -112,23 +117,34 @@ nav ul li a {
   width: 17rem;
 }
 
-.header-button .btn.btn2 {
+.header-body .header-button .btn.btn2 {
   justify-content: center;
   align-items: center;
   border: 1px solid #2f241f;
   background-color: unset;
 }
 
-.header-image {
-  position: absolute;
-  width: 522px;
-  height: 709px;
-  right: 0px;
-  top: 7rem;
-  background-image: url(/assets/images/sofa.png);
+.row .img-content {
+  position: relative;
+  width: inherit;
+  height: inherit;
 }
 
-.price-tag {
+.row .img-content img {
+  position: absolute;
+  top: 0.5%;
+  /* right: -36.86%; */
+  left: 9.9vw;
+  height: 89.5vh;
+  max-width: 100%;
+}
+
+.row.img-details {
+  position: relative;
+  margin-top: 2vh;
+}
+
+.row .img-content .price-tag {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -139,18 +155,18 @@ nav ul li a {
   position: absolute;
   width: 70px;
   height: 40px;
-  left: 48px;
-  top: 325px;
+  left: 10.8rem;
+  top: 20rem;
 
   background: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
 }
 
-.items-name {
+.row .img-content .items-name {
   position: absolute;
   width: 329px;
   height: 77px;
-  left: 48px;
+  left: 170px;
   top: 355px;
 
   font-family: "Inter";
@@ -162,7 +178,7 @@ nav ul li a {
   color: #ffffff;
 }
 
-.btn3 {
+.row .img-content .btn3 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -172,7 +188,7 @@ nav ul li a {
   position: absolute;
   width: 187px;
   height: 56px;
-  left: 48px;
+  left: 170px;
   top: 430px;
 
   background: #2f241f;
@@ -182,11 +198,165 @@ nav ul li a {
 
 /* about */
 #about {
-  padding: 172px 0;
-}
-
-.container-brown {
-  height: 300px;
+  margin: 0 auto;
+  /* height: 30rem; */
   background: #2f241f;
   color: #e5f0b6;
+}
+
+#about .container {
+  padding: 5rem 10%;
+}
+
+#about .container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#about .container h1 {
+  margin: 3rem auto;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+#about .container .row.why {
+  display: flex;
+  gap: 50px;
+}
+
+#about .container .row.why .alasan {
+  display: flex;
+  width: 100vh;
+}
+#about .container .row.why span {
+  background-color: #e5f0b680;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.9rem 0.7rem 0 0;
+}
+
+#about .container .row.why p {
+  font-weight: 700;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+
+#about .container .row.why .alasan.tiga {
+  justify-content: center;
+  align-items: baseline;
+}
+
+/* partner */
+
+#partner {
+  padding: 5rem 0;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 800;
+}
+
+#partner p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.partner {
+  display: flex;
+  align-items: baseline;
+}
+
+.partner-text {
+  width: 50%;
+}
+
+.partner-logo {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#furniture {
+  margin: 5rem auto;
+}
+
+.furniture .container .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.furniture-col-1 {
+  margin: 0 -12.5%;
+  display: flex;
+  flex-basis: 80%;
+  gap: 1rem;
+}
+
+.img-1 {
+  width: auto;
+  height: auto;
+  max-width: 25%;
+  max-height: 100%;
+}
+
+.img-2 {
+  width: auto;
+  height: auto;
+  max-width: 25%;
+  max-height: 100%;
+}
+
+.img-3 {
+  width: auto;
+  max-width: 40%;
+}
+
+.furniture-col-2 {
+  margin: 0 0 0 8rem;
+  flex-basis: 20%;
+}
+
+.furniture-title {
+  font-size: 48px;
+  margin: 2rem auto;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.furniture-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.furniture-categories-title h2 {
+  font-size: 1.5rem;
+  margin: 3rem 1rem;
+}
+
+.living-room {
+  background: #e5f0b6;
+  padding: 1rem 1rem 1.5rem;
+  width: 30rem;
+}
+
+.living-room h2 {
+  margin: 0 0 1rem;
+}
+
+.living-room p {
+  font-size: 1rem;
 }
